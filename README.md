@@ -2,7 +2,7 @@
 * [1.0 Executive Summary](https://github.com/skddedm/Bank-Income-and-Profit-Analysis/blob/main/README.md#10-executive-summary)
 * [2.0 Methodology](https://github.com/skddedm/Bank-Income-and-Profit-Analysis/blob/main/README.md#20-methodology)
 * [3.0 Project Outcomes](https://github.com/skddedm/Bank-Income-and-Profit-Analysis/blob/main/README.md#30-project-outcomes)
-* [4.0 Details of Key Performance Areas Identified](https://github.com/skddedm/Bank-Income-and-Profit-Analysis/edit/main/README.md#30-project-outcomes)
+* [4.0 Details of Key Performance Areas Identified](https://github.com/skddedm/Bank-Income-and-Profit-Analysis/blob/main/README.md#40-details-of-key-performance-areas-identified)
 * [5.0 Strategy Recommendation](https://github.com/skddedm/Bank-Income-and-Profit-Analysis/edit/main/README.md#50-strategy-recommendations)
 
 # 1.0 Executive Summary
