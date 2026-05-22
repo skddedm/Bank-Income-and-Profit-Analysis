@@ -3,7 +3,7 @@
 * [2.0 Methodology](https://github.com/skddedm/Bank-Income-and-Profit-Analysis/blob/main/README.md#20-methodology)
 * [3.0 Project Outcomes](https://github.com/skddedm/Bank-Income-and-Profit-Analysis/blob/main/README.md#30-project-outcomes)
 * [4.0 Details of Key Performance Areas Identified](https://github.com/skddedm/Bank-Income-and-Profit-Analysis/blob/main/README.md#40-details-of-key-performance-areas-identified)
-* [5.0 Strategy Recommendation](https://github.com/skddedm/Bank-Income-and-Profit-Analysis/edit/main/README.md#50-strategy-recommendations)
+* [5.0 Strategy Recommendation](https://github.com/skddedm/Bank-Income-and-Profit-Analysis/blob/main/README.md#50-strategy-recommendations)
 
 # 1.0 Executive Summary
 Banks cannot exist without the customer. It needs to make enough income and profit to be able to operate into the foreseable future at the minimum risk acceptable. The bank’s operations in the country is broken into provinces, regions and branches. Each of these divisions perform financially to positively impact the bank-wide financial performance. An imaginary bank - Assurance Bank was used in this project.
