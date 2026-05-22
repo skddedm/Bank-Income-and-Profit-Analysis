@@ -36,6 +36,8 @@ Summary Project Findings:
 The following methods were deployed:
 * Branch income and profitability database was created using SQL: branch_rev_prof_database
 * 7 tables were created under the database: branch_list, product_list, segment_list, income_statement_summary, segment_income, product_income, product_cost
+
+```SQL
 create database Branch_Rev_Prof_Database;
 Use Branch_Rev_Prof_Database;
 
@@ -164,3 +166,157 @@ from branch_list
 left join income_statement_summary
 on branch_list.branch_name = income_statement_summary.branch_name
 group by branch_region;
+```
+
+* The various key indicators defined in the object statement were manipulated with SQL and analyzed using Excel
+* Dashboards summary was created using Excel charts with descriptive interpretations.
+* Recommendations, management impact and risks to be considered were suggested to aid resolve weaknesses discovered after the data analysis.
+
+Data Limitations 
+* Aggregate Data Constraints: Branch-level aggregation of the data mask out customer-level profitability differences.  
+* Cost Allocation Assumptions: Certain costs may be allocated using estimates rather than direct attribution, affecting precision.
+* Limited Time Horizon: Analysis based on a single period (FY2025) may not capture seasonality or long-term trends over a range of years
+* Exclusion of External Factors: Market conditions, competitors’ pricing and macroeconomics impacts were not fully incorporated. 
+
+# 2.0 Project Outcomes
+Based on the project objective, the following key performance areas was discovered: 
+Strengths
+* Red Deer branch is the top income making branch in Alberta: $5,372,857.33
+* Red Deer branch is the most profitable branch in Alberta: $4,614,393.34
+* SME is the top income making segment in Alberta: $32,998,423.35
+* Central is the most profitable region within the province: $7,172,463.69
+* Mortgage is the most profitable product in Alberta. Red Deer, St. Albert and Sheerwood Park branches the made top 3 profit with mortgage as a product 
+
+Weaknesses
+* 3 branches made losses for the reporting year
+Significant variation exists in net profit of the branches indicating inefficiencies in cost management and optimal 	product mix and income generation but Leduc, Bonnyville,and Borealis branches were most hit with larger losses. 
+* 25 branches made losses over the savings product totaling 
+Revenue in some branches is heavily concentrated in a small number of products, increasing exposure to income 	volatility and limiting growth opportunities from diversified offerings whiles the savings products generated lesser 	income relative to cost resulting in losses for 25 branches. A total of -$891,325.26 loss was accrued for the savings 	products to the 25 branches
+* 8 branches have income to cost ratio below 1
+8 branches exhibited operating expenses growing faster than income, resulting in elevated cost-to-income ratios less 	than 1. This suggests opportunities for cost optimization and improved operational efficiency.
+
+The dashboard below summarizes the findings of the analysis. 
+<img width="862" height="557" alt="image" src="https://github.com/user-attachments/assets/0a7b34c7-f1c6-433e-b451-fa3b8eb240a3" />
+
+# 3.0 Details of Key Performance Areas Identified
+### 3.1 Branch income performance by branch
+The 3 best performing and the 3 worst performing branches by income are relatively close in terms of performance, painting a fair income performance across the branches. 
+
+Best Performing Branches by Income
+| Row Labels             | Sum of Income |
+|------------------------|----------------|
+| Red Deer Branch        | $5,372,857.33 |
+| St. Albert Branch      | $3,991,337.80 |
+| Grand Prairie Branch   | $3,778,639.08 |
+
+Worst Performing Branches by Income
+| Row Labels               | Sum of Income |
+|--------------------------|----------------|
+| Leduc Branch             | $1,169,121.47 |
+| Rocky Mountain Branch    | $1,127,087.08 |
+| Bonnyvile Branch         | $500,247.08 |
+
+### 3.2 Branch profit performance by branch
+The 3 most profitable branches have closely performed in match to each other. The 3 loss making branches give a need for market assessment and customer service evaluation.
+
+Best Performing Branches by Profit
+| Row Labels              | Profit |
+|-------------------------|----------------|
+| Red Deer Branch         | $4,614,393.34 |
+| Grand Prairie Branch    | $2,901,585.29 |
+| Edmonton North Branch   | $2,553,392.87 |
+
+Worst Performing Branches by Profit
+| Row Labels            | Profit |
+|-----------------------|----------------|
+| Leduc Branch          | -$994,622.48 |
+| Bonnyvile Branch      | -$1,143,633.64 |
+| Borealis Branch       | -$1,356,792.63 |
+
+### 3.3 Product Performance by Profitability
+While mortgage expresses to be the most profitable product, the same product is loss making for Borealis and Bonnyville. An assessment needs to be done to seek opportunities to boost the mortgage profit numbers in Borealis and Bonnyville.  
+
+Best Performing Product by Profit
+| Product Name | Branch Name    | Sum of Value |
+|---------------|-----------------|----------------|
+| Mortgage      | Red Deer        | $1,434,496.31 |
+| Mortgage      | St. Albert      | $1,109,463.08 |
+| Mortgage      | Sherwood Park   | $708,881.13 |
+
+Worst Performing Product by Profit
+| Product Name | Branch Name   | Sum of Value |
+|---------------|----------------|----------------|
+| Credit Card   | Bonnyville     | -$243,590.34 |
+| Mortgage      | Borealis       | -$326,353.91 |
+| Mortgage      | Bonnyville     | -$612,889.45 |
+
+### 3.4 Income by Segments
+SME is the top profit making segment possibly due to larger number of SME in various parts of the province seeking banking services continuously. The other 3 segments fairly performed in match against the SME segment.
+
+Income by Customer Segment
+| Row Labels | Income |
+|-------------|----------------|
+| SME         | $32,998,423.35 |
+| retail      | $19,952,535.04 |
+| corporate   | $14,580,698.69 |
+| prestige    | $9,208,862.33 |
+| **Grand Total** | **$76,740,519.41** |
+
+### 3.5 Regional Performance by Profitability
+The uneven spread of regional profitability is of a great concern, particularly with Calgary which is expected to make higher profit due to its cosmopolitan structure and huge banking opportunities as a major city in Alberta. 
+
+Profit by Region
+| Region       | Profit |
+|---------------|----------------|
+| Central       | $7,172,463.69 |
+| Edmonton      | $7,140,142.83 |
+| North         | $5,563,110.96 |
+| Calgary       | $2,425,064.28 |
+| South         | $1,219,318.24 |
+| **Grand Total** | **$23,520,100.00** |
+
+### 3.6 List of Severe Loss Making Branches
+25 branches out of 29 made losses with the savings products. The loss making characteristics of this product across a larger branch network give reasons for product assessment and quick managerial management decision making.
+
+## Loss on Savings Product by Branch
+
+| Branch Name                | Loss on Savings Product |
+|----------------------------|--------------------------|
+| Lloydminster Branch        | -$7,191.36 |
+| Aspen Branch               | -$10,454.61 |
+| Bighorn Branch             | -$12,065.32 |
+| Calgary South Branch       | -$13,020.05 |
+| Mosaic Branch              | -$14,112.87 |
+| Chinook Branch             | -$18,451.56 |
+| Edmonton South Branch      | -$18,508.29 |
+| Mcleod River Branch        | -$19,385.00 |
+| Bow Valley Branch          | -$21,213.06 |
+| Camrose Branch             | -$23,047.64 |
+| Palliser Branch            | -$23,458.05 |
+| Calgary West Branch        | -$24,316.51 |
+| Rocky Mountain Branch      | -$24,346.67 |
+| Calgary Foothills Branch   | -$27,606.54 |
+| Leduc Branch               | -$27,880.64 |
+| Cold Lake Branch           | -$30,158.81 |
+| Wood Buffalo Branch        | -$33,102.84 |
+| Wetaskiwin Branch          | -$35,397.71 |
+| Northwest Branch           | -$37,443.45 |
+| Edmonton North Branch      | -$56,929.91 |
+| Lakeland Branch            | -$68,941.67 |
+| Calgary Rural Branch       | -$77,803.92 |
+| Drayton Valley Branch      | -$84,676.19 |
+| Borealis Branch            | -$88,943.38 |
+| Bonnyvile Branch           | -$92,869.21 |
+| **Grand Total**            | **-$891,325.26** |
+
+# 3.0 Strategy Recommendations
+The following strategies have been recommended to aid resolve the identified weaknesses with the performance analysis of Assurance Bank in Alberta. 
+
+ Identified Weaknesses | Recommendation | Management Impact | Risk to be Considered |
+|---|---|---|---|
+| **3 branches made losses for the reporting year: Leduc, Bonnyville, and Borealis** | - Deep-dive analysis of fixed versus variable costs to ensure expenses are captured under the correct account types<br>- Review staff levels and branch operating hours to reduce operational costs<br>- Evaluate local market dynamics to align branch capabilities with market demand<br>- Introduce real-time performance monitoring and reporting systems | - Enables corrective actions such as cost restructuring, staff optimization, and targeted income initiatives to improve profitability of loss-making branches<br>- Supports decisions to reprice, redesign, or terminate underperforming savings products<br>- Redirects capital, budget, and staffing efforts toward more profitable branches and products<br>- Refines branch revenue and cost strategies to improve income-to-cost ratios below 1<br>- Encourages digitization and technology adoption to improve customer service delivery | **A. Financial Risks**<br>- Customer attrition from pricing changes or product redesigns<br>- Revenue concentration risk from overreliance on highly profitable products<br>- Short-term profit volatility during turnaround initiatives<br><br>**B. Operational Risks**<br>- Execution risk from inconsistent implementation across branches<br>- Staff resistance to changes in performance metrics or incentives<br>- Service quality risk from aggressive cost reductions |
+| **25 branches made losses on savings products totaling -$891,325.26** | - Review interest rates paid on savings accounts against market offerings<br>- Introduce tiered interest rates based on account balances<br>- Reduce operational costs through digital self-service channels<br>- Introduce real-time performance monitoring and reporting systems | - Improves product profitability through better pricing strategies<br>- Encourages operational efficiency and reduced servicing costs<br>- Enhances visibility into branch-level product performance for timely decision-making | - Customer dissatisfaction if interest rates become less competitive<br>- Increased implementation costs for digital transformation initiatives<br>- Potential reduction in branch traffic affecting cross-selling opportunities |
+| **8 branches have income-to-cost ratios below 1** | - Cross-sell credit cards, personal loans, and GICs to existing savings customers to recover lost income opportunities<br>- Set branch-specific targets based on local demographics<br>- Introduce staff incentives based on net income instead of gross income<br>- Introduce real-time performance monitoring and reporting systems | - Strengthens branch profitability through diversified revenue streams<br>- Aligns branch goals with regional customer behavior and profitability objectives<br>- Improves accountability and performance-driven culture among staff | - Risk of over-aggressive sales practices impacting customer trust<br>- Incentive structures may create internal competition or morale issues<br>- Additional monitoring systems may increase operational complexity |
+
+
+
